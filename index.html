@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Frontend Mentor | Fylo data storage component</title>
+  </head>
+  <body>
+    <div class="page__wrapper">
+      <!--HEADER SECTION-->
+      <header class="card__header">
+        <h1>
+          <img class="logo" src="./images/logo.svg" alt="Fylo Company Logo" />
+        </h1>
+        <!--HEADER LIST-->
+        <ul class="card__subheader__list">
+          <li class="subheader__list--items">
+            <a href="#"
+              ><img class="item--logo" src="./images/icon-document.svg" alt=""
+            /></a>
+          </li>
+          <li class="subheader__list--items">
+            <a href="#"
+              ><img class="item--logo" src="./images/icon-folder.svg" alt=""
+            /></a>
+          </li>
+          <li class="subheader__list--items">
+            <a href="#"
+              ><img class="item--logo" src="./images/icon-upload.svg" alt=""
+            /></a>
+          </li>
+        </ul>
+      </header>
+      <!--FOOTER SECTION-->
+      <section class="footer">
+        <h2 class="footer__header">
+          You’ve used <strong> 815 GB</strong> of your storage
+        </h2>
+        <!--RANGE BAR-->
+        <div class="bar">
+          <div class="inner--bar">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="range--stats">
+          <span class="range--start">0 GB</span>
+          <span class="range--end">1000 GB</span>
+        </div>
+        <aside><strong>185 </strong><sup class="left">GB Left </sup></aside>
+      </section>
+    </div>
+  </body>
+</html>

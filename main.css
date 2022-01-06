@@ -1,0 +1,208 @@
+:root {
+  /* COLOR PALLET */
+
+  --clr-100: hsl(243, 100%, 93%);
+  --clr-200: hsl(229, 7%, 55%);
+  --clr-300: hsl(228, 56%, 26%);
+  --clr-400: hsl(229, 57%, 11%);
+
+  /* GRADIENT COLORS */
+  --clr-grd-primary: hsl(6, 100%, 80%);
+  --clr-grd-secondary: hsl(335, 100%, 65%);
+
+  /*FONTS FOR HEADINGS AND WEIGHTS */
+  --fn-fm: "Raleway", sans-serif;
+  --fnt-wght-400: 400;
+  --fnt-wght-700: 600;
+}
+*,
+*::backdrop,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: var(--fnt-fm);
+}
+body {
+  background-color: var(--clr-violet);
+  font-family: var(--fn-fm);
+  font-size: 62.5%;
+  height: 100vh;
+}
+.page__wrapper {
+  background-image: url(./images/bg-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 0 1.5rem 2rem 1.5rem;
+  display: grid;
+  gap: 1rem;
+  place-content: center;
+}
+/* HEADER SECTION */
+.card__header {
+  background-color: var(--clr-300);
+  border-radius: 0.7rem;
+  border-top-right-radius: 5rem 6rem;
+  padding: 2.3rem 2.5rem 0rem 2.5rem;
+  overflow: hidden;
+  max-width: 350px;
+}
+.logo {
+  width: clamp(9rem, 9rem, 20vw);
+  margin-bottom: 1.5rem;
+}
+/*SUBHEADER SECTION */
+.card__subheader__list {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.subheader__list--items {
+  background-color: var(--clr-400);
+  border-radius: 0.6rem;
+  padding: 0.75rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--clr-300);
+  border-radius: 0.7rem;
+  padding: 2.3rem 2.5rem 1.2rem 2.5rem;
+  padding: 1.8rem;
+  position: relative;
+  text-align: center;
+  max-width: 350px;
+}
+
+.footer__header {
+  color: var(--clr-100);
+  font-size: 0.92rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+
+/* RANGE BAR */
+.bar {
+  width: 100%;
+  height: 1rem;
+  background-color: var(--clr-400);
+  border-radius: 2rem 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.inner--bar {
+  width: 75%;
+  height: 0.9rem;
+  border-radius: 2rem 2rem;
+  background-image: linear-gradient(
+    120deg,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  position: relative;
+}
+.circle {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 100%;
+  height: 0.7rem;
+  width: 0.7rem;
+  right: 0.1rem;
+  top: 0.1rem;
+}
+/* RANGE STATS */
+
+.range--stats {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+.range--end {
+  margin-left: auto;
+}
+/* ASIDE SECTION */
+aside {
+  position: absolute;
+  bottom: -4rem;
+  left: 22%;
+  bottom: -20%;
+  padding: 0.8rem 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+aside strong {
+  font-size: 2.5rem;
+}
+.left {
+  color: var(--clr-200);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transform: translateY(9rem);
+}
+
+/*@ MEDIA */
+@media screen and (min-width: 1400px) {
+  .page__wrapper {
+    background-image: url(./images/bg-desktop.png);
+    background-color: var(--clr-400);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom 0 left 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    place-content: center;
+  }
+  .card__header {
+    min-width: 350px;
+    height: 205px;
+    align-self: center;
+  }
+  .footer {
+    align-self: end;
+    height: 155px;
+    min-width: 530px;
+    text-align: left;
+  }
+
+  aside {
+    position: absolute;
+    bottom: -4rem;
+    left: 59%;
+    bottom: 80%;
+    padding: 0.8rem 1.9rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+  }
+  aside::after {
+    content: "";
+    display: block;
+    bottom: -1rem;
+    right: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1rem 1rem 1rem 0;
+    border-color: transparent #ffffff transparent transparent;
+  }
+}
